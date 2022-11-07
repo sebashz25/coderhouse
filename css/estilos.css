@@ -1,249 +1,227 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Kosugi&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kosugi', sans-serif; }
 
-.body{
-    width: 100vh;
-    height: 100vh;
-    display: grid;
-    grid-template-columns:repeat(3, 1fr) ;
-    grid-template-rows:repeat(2, 1fr) .5fr;
-    grid-template-areas: "header header header"
-                         "main main main"
-                         "footer footer footer";
-}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "header header" "main main" "footer footer"; }
 
+header {
+  height: 15vh;
+  grid-area: header;
+  background: linear-gradient(90deg, #181515 0%, rgba(83, 37, 30, 0.95562) 49%, #e70000 100%); }
 
+.home {
+  display: flex; }
+  .home img {
+    height: 235px;
+    padding: 40px;
+    margin: -50px; }
 
-header{
-    height: 15vh;
-    grid-area: header;
-    background-color: rgba(0, 0, 0, 0.493);
-}
-
-header nav{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;     
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    padding-right: 20px;
-}
-
-#logoHeader{
-margin-top: 5px;
-} 
-
-main{
-    height: 70vh;
-    width: 100vw;
-    grid-area: main;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
-
-.main_contenido{
-    background: url("/img/motomain.jpg");
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}
-   
-.mainVideos{   
-    background-color: rgba(255, 0, 0, 0.952);
-   grid-gap: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-   
-}  
-
-.mainFotos{
-    position: relative;
-    min-height: 100vh;
-   
-    grid-gap: 20px;
-    display: grid;
-}
-.contenedor{
-        /* background-image: url("/img/marcmarquez1.png"); */
-        height: 100%;
-       display: grid;
-       background-size: cover;       
-}
-
-.contenedor_contacto h2{
+.nav {
+  max-width: 960px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 0 0 auto;
+  padding: 45px 0; }
+  .nav ul {
     text-align: center;
-    font-size: 35px;
-    padding: 15px;
-}   
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6); }
+    .nav ul li {
+      display: inline-block; }
+      .nav ul li a {
+        padding: 18px;
+        font-family: "Open Sans";
+        text-transform: uppercase;
+        color: rgba(249, 250, 249, 0.5);
+        font-size: 18px;
+        text-decoration: none;
+        display: block; }
+        .nav ul li a:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+          background: rgba(255, 255, 255, 0.1);
+          color: rgba(0, 35, 122, 0.7); }
 
-.contenedor_contacto p{
-    font-size: 20px;
-    padding: 10px;
-    text-align: left;
-}
+main {
+  height: 70vh;
+  grid-area: main; }
 
-
-.formulario .fila{
-    display: flex;
-}
-
-.formulario .col{
+.home {
+  display: flex; }
+  .home .homeTexto {
+    padding: 1px;
+    margin: 25px; }
+    .home .homeTexto h1 {
+      font-size: 50px;
+      color: black;
+      margin: 15px; }
+    .home .homeTexto p {
+      padding-right: 50px;
+      margin: 15px; }
+  .home .homeVideo {
     width: 50%;
-    padding: 10px;
-    position: relative;
-}
+    padding-right: 35px; }
+    .home .homeVideo video {
+      width: 650px;
+      height: 400px;
+      margin-top: 25px; }
 
-.formulario .col input, .formulario .col textarea{
-    display: block;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    margin-bottom: 10px;
-    background-color: rgba(128, 128, 128, 0.267) ;
-    color: black;
-    font-size: 16PX;
+.main-fotos {
+  background-color: rgba(5, 5, 5, 0.473);
+  padding: 50px;
+  grid-area: main; }
 
-}
-.formulario button{
+.fotos {
+  background-color: black; }
+  .fotos .imgfotos {
+    height: 256px;
+    width: 256px;
+    display: inline-block;
+    margin: 5px;
     cursor: pointer;
-    background-color: transparent;
-    border: 2px solid rgb(220, 232, 245);
-    display: block;
-    width: fit-content;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: black;
-    position: relative;
-    z-index: 10px;
-}
-.formulario button:hover{
-    background-color: red;
-}
-.formulario .col img{
-    width: 70%;
-}
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.664);
+    justify-content: center; }
 
+.mainCenter {
+  grid-area: main;
+  margin: 1px;
+  background-color: rgba(5, 5, 5, 0.473);
+  background-size: cover;
+  padding: 20px;
+  padding-top: 15px; }
+  .mainCenter video {
+    width: 500px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.767);
+    border-radius: 10px; }
+  .mainCenter .mainvideos {
+    display: inline-block;
+    width: 500px;
+    justify-content: space-around; }
 
-footer{    
-    grid-area: footer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.712);
-    color: white;
-    position: absolute;
-    bottom: o;
-    width: 100%;
-}
+.contenedor {
+  margin: auto;
+  max-width: 1300px;
+  overflow: auto;
+  padding: 0 10px; }
 
+h2 {
+  color: orangered;
+  font-size: 32px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  text-align: center; }
 
-@media only screen and (max-width:1200px){
+h3 {
+  color: black;
+  font-size: 22px;
+  text-align: center; }
 
-}
+p {
+  margin-bottom: 20px;
+  font-size: 16px; }
 
-@media only screen and (max-width:768px){
-   
-}
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.507); }
 
-@media only screen and (max-width: 320px) {
-    header nav{
-        display: flex;
-        display: grid;
-        grid-template-columns: 1fr, 1fr ;
-        grid-template-rows: 1fr, 1fr ;
-        grid-template-areas:"imgHeader imgHeader"
-                            "btn btn";
-        justify-items: center;  
-        align-items: center;        
-    }
+.btn {
+  width: 300px;
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px 50px;
+  border: none;
+  color: red;
+  background-color: gray;
+  cursor: pointer; }
 
-    #botonera {
-        grid-area:btn ;
-    }
+.btn:hover {
+  background: #1a1a1a; }
 
-    #logoHeader{
-        grid-area: imgHeader;
-    }
+.small {
+  font-size: 8px; }
 
-    main{
-      
-        grid-area: main;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        
-    }
-}
+.p-80 {
+  padding: 80px; }
 
+.bk {
+  background: url(/img/pista.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  width: 100vw; }
 
-
-
-
-
-
-    
-
-
-
-/* .header{
-    grid-area: header;
-   
-    background-color: aqua;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99%;
+#form .form-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  #form .form-wrap-bk {
+    background: url(/img/motologo2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-}
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 100%; }
+  #form .form-wrap-formu {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.568);
+    color: black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; }
+  #form .form-wrap button {
+    width: 100%;
+    border-radius: 5px; }
 
-.header_contenedor header{
-    max-width: 1100px;
-    margin: auto;
+.pilot {
+  height: 70vh;
+  width: 100vw; }
+  .pilot .contenedorp {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;    
-}
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column; }
+    .pilot .contenedorp .img1 {
+      display: inline-block;
+      position: relative;
+      height: 190px;
+      width: 190px;
+      border-radius: 10px;
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.336);
+      cursor: pointer;
+      margin: auto;
+      opacity: 1;
+      visibility: visible;
+      background: rgba(204, 34, 34, 0);
+      overflow: hidden; }
+    .pilot .contenedorp img {
+      border-radius: 10px;
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+      .pilot .contenedorp img:hover {
+        opacity: 0;
+        visibility: hidden; }
+      .pilot .contenedorp img h3 {
+        color: white;
+        font-size: 20x; }
+      .pilot .contenedorp img p {
+        color: white;
+        font-size: 15x; }
 
-.header_contenedor header ul{
-    display: flex;
-    list-style: none;
-}
-
-.header_contenedor header nav ul li a{
-    text-align: none;
-    color: black ;
-    padding: 3px ;
-    margin: 5px 15px;
-    text-decoration: none;
-    font-family: 'Kaushan Script';
-}
-
-.header_contenedor header nav ul li a:hover{
-    color:  coral;
-}
-
-.contenedor{
-    background-image: url("/img/motoheader.jpg");
-     background-size: cover;
-    display: flex;
-    color: #fff;
-    align-items: center;
-} */
-
- 
+footer {
+  height: 15vh;
+  grid-area: footer;
+  background: linear-gradient(90deg, #e70000 0%, rgba(83, 37, 30, 0.95562) 49%, #181515 100%);
+  color: white;
+  text-align: center;
+  display: inline-block; }

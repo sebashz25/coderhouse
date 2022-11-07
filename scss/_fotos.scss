@@ -1,0 +1,27 @@
+.main-fotos{
+    
+    background-color: rgba(5, 5, 5, 0.473); 
+    
+    padding: 50px;     
+    
+    grid-area: main;
+}
+.fotos{
+    
+    background-color: black;
+   
+    .imgfotos{     
+        height: 256px;   
+        width: 256px;      
+        display: inline-block;
+        margin: 5px;
+        cursor: pointer;        
+        border-radius: 10px; 
+        overflow: hidden;
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.664);  
+        justify-content: center; 
+        
+                  
+    }
+
+}

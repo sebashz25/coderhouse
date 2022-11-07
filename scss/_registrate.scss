@@ -1,0 +1,87 @@
+.contenedor{
+    margin: auto;
+    max-width: 1300px;
+    overflow: auto;
+    padding: 0 10px;
+} 
+h2{
+    color: orangered;
+    font-size: 32px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+h3{
+    color: black;
+    font-size: 22px;
+    text-align: center;
+}
+
+p{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.507);
+}
+
+.btn{
+         width: 300px;
+         display: inline-block;
+         font-size: 20px;
+         padding: 10px 50px;
+         border: none;
+         color: red;
+         background-color: gray;
+         cursor:pointer;
+}
+.btn:hover{
+         background: lighten($color: #000000, $amount: 10%)
+}
+
+.small{
+    font-size: 8px;
+}
+
+.p-80{
+    padding: 80px;
+}
+
+.bk{
+    background: url(/img/pista.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    width: 100vw;
+}
+
+#form{
+    .form-wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        &-bk{
+            background: url(/img/motologo2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            height: 100%;
+        }
+        &-formu{
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.568);
+            color: grayscale($color: #000000);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;            
+        }
+        button{
+            width: 100%;
+            border-radius: 5px;
+            
+        }
+    }
+}
